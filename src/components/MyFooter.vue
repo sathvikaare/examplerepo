@@ -9,7 +9,6 @@
 <style scoped>
 .footer{
   width: 100%;
-  margin-left: -16px;
   font-family: "Open Sans";
 }
 </style>

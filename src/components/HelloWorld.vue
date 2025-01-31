@@ -26,8 +26,8 @@
                 <span class="text-white">Risk</span>
             </div>
         </div>
-        <div class="p-4 rightcontainer  bg-whitegrey">
-          <div class="formdiv flex flex-row ">
+        <div class="py-5 rightcontainer  bg-whitegrey">
+          <div class="formdiv pl-5 flex flex-row ">
           <form @submit.prevent="submitForm" class="border form-container p-4 ">
             <div class="text-xl font-bold text-center mb-4">Details Form </div>
             <div class="mb-4 flex flex-row gap-4" >
@@ -51,9 +51,12 @@
             
           </form>
           </div>
-          <AppFooter />
-         
-          
+          <!-- <footer class="footer fixed h-10 border-t  border-lightgrey bg-white bottom-0  ">
+            <div class="flex items-center  justify-center p-2">
+              <h1 class="text-xs font-bold">© {{year}} Crystalline Software Technologies Pvt. Ltd</h1>
+            </div>
+          </footer> -->
+          <AppFooter/>
         </div>
     </div>
 </template>
@@ -62,7 +65,6 @@
 import { defineComponent, reactive } from 'vue';
 import useVuelidate from '@vuelidate/core'
 import { required, email, minLength } from '@vuelidate/validators'
-// import Footer from "@/components/vueFooter.vue";
 import AppFooter from "./MyFooter.vue"
 export default defineComponent({
   name: 'HelloWorld',
@@ -71,7 +73,8 @@ export default defineComponent({
   },
   data(){
     return {
-      names:"sathvika"
+      names:"sathvika",
+      year:2025
     };
   },
   components:{
@@ -107,6 +110,10 @@ export default defineComponent({
 <style scoped>
 h3 {
   margin: 40px 0 0;
+}
+.footer{
+  width: 100%;
+  font-family: "Open Sans";
 }
 .navbar{
     position: fixed;
