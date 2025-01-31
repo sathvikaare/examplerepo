@@ -5,30 +5,30 @@
   </div>
   <div class="flex h-screen maincontainer ">
         <div class="flex flex-col bg-primary leftcontainer  p-2.5">
-            <div class="flex flex-row gap-2 ">
-                <img src="@/assets/Tasks.svg"/>
+            <div class="flex flex-row items-center gap-2 ">
+                <img src="@/assets/Tasks.svg" class="h-4"/>
                 <span class="text-white">Audit</span>
             </div>
-            <div class="flex flex-row gap-2 mt-2.5">
-                <img src="@/assets/Tasks.svg"  />
+            <div class="flex flex-row items-center gap-2 mt-2.5">
+                <img src="@/assets/Tasks.svg" class="h-4"/>
                 <span class="text-white  ">My Tasks</span>
             </div>
-            <div class="flex flex-row gap-2 mt-2.5">
-                <img src="@/assets/Tasks.svg"  />
+            <div class="flex flex-row items-center gap-2 mt-2.5">
+                <img src="@/assets/Tasks.svg"  class="h-4"/>
                 <span class="text-white">My Findings</span>
             </div>
-            <div class="flex flex-row gap-2 mt-2.5 ">
-                <img src="@/assets/Tasks.svg"  />
+            <div class="flex flex-row items-center gap-2 mt-2.5 ">
+                <img src="@/assets/Tasks.svg" class="h-4" />
                 <span class="text-white">My Finding Tasks</span>
             </div>
-            <div class="flex flex-row gap-2 mt-2.5 ">
-                <img src="@/assets/Tasks.svg"  />
+            <div class="flex flex-row items-center gap-2 mt-2.5 ">
+                <img src="@/assets/Tasks.svg" class="h-4" />
                 <span class="text-white">Risk</span>
             </div>
         </div>
         <div class="py-5 rightcontainer  bg-whitegrey">
           <div class="formdiv pl-5 flex flex-row ">
-          <form @submit.prevent="submitForm" class="border form-container p-4 ">
+          <!-- <form @submit.prevent="submitForm" class="border form-container p-4 ">
             <div class="text-xl font-bold text-center mb-4">Details Form </div>
             <div class="mb-4 flex flex-row gap-4" >
               <label class="w-1/6 font-bold">Name:</label>
@@ -49,13 +49,12 @@
               <button type="submit" class=" border px-2 py-1 bg-primary text-center text-white">Submit</button>
             </div>
             
-          </form>
+          </form> -->
+            <TableComponent/>
+            
+
+
           </div>
-          <!-- <footer class="footer fixed h-10 border-t  border-lightgrey bg-white bottom-0  ">
-            <div class="flex items-center  justify-center p-2">
-              <h1 class="text-xs font-bold">© {{year}} Crystalline Software Technologies Pvt. Ltd</h1>
-            </div>
-          </footer> -->
           <AppFooter/>
         </div>
     </div>
@@ -66,6 +65,7 @@ import { defineComponent, reactive } from 'vue';
 import useVuelidate from '@vuelidate/core'
 import { required, email, minLength } from '@vuelidate/validators'
 import AppFooter from "./MyFooter.vue"
+import TableComponent from "./VueTable.vue"
 export default defineComponent({
   name: 'HelloWorld',
   props: {
@@ -79,6 +79,8 @@ export default defineComponent({
   },
   components:{
         AppFooter,
+        TableComponent,
+      
     },
     setup() {
     const form = reactive({
