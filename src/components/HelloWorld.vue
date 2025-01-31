@@ -21,6 +21,10 @@
                 <img src="@/assets/Tasks.svg"  />
                 <span class="text-white">My Finding Tasks</span>
             </div>
+            <div class="flex flex-row gap-2 mt-2.5 ">
+                <img src="@/assets/Tasks.svg"  />
+                <span class="text-white">Risk</span>
+            </div>
         </div>
         <div class="p-4 rightcontainer  bg-whitegrey">
           <div class="formdiv flex flex-row ">
