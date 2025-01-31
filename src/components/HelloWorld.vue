@@ -19,15 +19,11 @@
             </div>
             <div class="flex flex-row items-center gap-2 mt-2.5 ">
                 <img src="@/assets/Tasks.svg" class="h-4" />
-                <span class="text-white">My Finding Tasks</span>
-            </div>
-            <div class="flex flex-row items-center gap-2 mt-2.5 ">
-                <img src="@/assets/Tasks.svg" class="h-4" />
                 <span class="text-white">Risk</span>
             </div>
         </div>
         <div class="py-5 rightcontainer  bg-whitegrey">
-          <div class="formdiv pl-5 flex flex-row ">
+          <div class="formdiv px-5 flex flex-row ">
           <!-- <form @submit.prevent="submitForm" class="border form-container p-4 ">
             <div class="text-xl font-bold text-center mb-4">Details Form </div>
             <div class="mb-4 flex flex-row gap-4" >
@@ -134,12 +130,13 @@ h3 {
 .maincontainer{
   height:92vh ;
   font-size: 16px;
-  font-family: "Open Sans";
+  font-family: "Open Sans",sans-serif;
   margin-top: 46px;
 }
 .leftcontainer{
   width: 14%;
-  font-family: "Open Sans";
+  font-size: 14px;
+  font-family: "Open Sans",sans-serif;
 }
 .rightcontainer{
   width: 86%;
