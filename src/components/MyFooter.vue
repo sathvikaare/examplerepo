@@ -1,6 +1,6 @@
 <template>
-  <footer class="footer  fixed bottom-0 z-50 h-10 border-t  border-lightgrey bg-white ">
-    <div class="flex items-center  justify-center p-2">
+  <footer class="footer  fixed bottom-0 z-50 h-10 border-t flex flex-row items-center  justify-center  border-lightgrey bg-white ">
+    <div class=" p-2">
       <h1 class="text-xs font-bold">© {{year}} Crystalline Software Technologies Pvt. Ltd</h1>
     </div>
   </footer>

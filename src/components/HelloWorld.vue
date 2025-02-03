@@ -47,9 +47,6 @@
             
           </form> -->
             <TableComponent/>
-            
-
-
           </div>
           <AppFooter/>
         </div>

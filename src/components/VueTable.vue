@@ -52,11 +52,11 @@
                 <img src="@/assets/sorting.svg" alt="sort-icon" />
               </span>
             </th>
-            <th class="centerColumn">
-              <span class="cursor-pointer flex flex-row gap-2">
+            <th class="">
+              <div class="cursor-pointer flex flex-row justify-center  gap-2">
                 <p>Priority</p>
                 <img src="@/assets/sorting.svg" alt="sort-icon" />
-              </span>
+              </div>
             </th>
             
             <th class="centerColumn ">
@@ -68,29 +68,27 @@
             <tr v-for="row in data" :key="row" class="border text-xs trow cursor-pointer">
               <td class="centerColumn flex items-center left-5 severitysearch">
                 <div class="flex flex-row top-0 justify-center items-center">
-                  <p class={{row.severity}}></p>
+                  <p :class="row.severity" class="ml-4"></p>
                 </div>
               </td>
               <td>{{row.risk}}</td>
               <td>{{row.category}}</td>
               <td>{{row.tierlevel}}</td>
               <td class="centerColumn">
-                <button class={row.priority}>{{row.priority}}</button>
+                <button :class="row.priority">{{row.priority}}</button>
               </td>
-              <td class="centerColumn">
-                <div class="relative">
+              <td class="flex justify-center items-center">
+                <!-- <div class="relative"> -->
                   <img
                     class="h-5 cursor-pointer"
                     src="@/assets/ActionIcon.svg"
                     alt="Action"
                   />
-                </div>
+                <!-- </div> -->
               </td>
             </tr>
         </tbody>
       </table>
-
-        
       </div>
 </template>
 
@@ -116,6 +114,65 @@
     tr{
         height: 60px;
     }
+    .P1,.P2,.P3,.P4,.P5{
+        border-radius: 4px;
+        width: 96px;
+        height: 20px;
+
+    }
+    .P1{
+        border:1px solid rgb(192, 0, 0);
+        background-color: rgba(192, 0, 0, 0.2);
+        color:rgb(192, 0, 0);
+        }
+        .P2{
+        border:1px solid rgb(255, 0, 0);
+        background-color: rgba(255, 0, 0, 0.2);
+        color:rgb(255, 0, 0) ;
+        }
+        .P3{
+        border:1px solid rgb(255, 153, 0);
+        background-color: rgba(255, 153, 0, 0.2);
+        color:rgb(255, 153, 0);
+        }
+        .P4{
+        border:1px solid rgba(146, 208, 80) ;
+        background-color: rgba(146, 208, 80, 0.2);
+        color: rgba(146, 208, 80);
+        
+        }
+        .P5{
+            border:1px solid rgb(0, 176, 80) ;
+            background-color: rgba(0, 176, 80, 0.2);
+            color: rgb(0, 176, 80) ;
+        }
+        .veryhigh,.high,.verylow,.low,.moderate{
+            width: 20px;
+            height: 20px;
+            border-radius: 10px;
+            margin-top: 20px;
+            cursor: pointer;
+        }
+        .veryhigh{
+            background-color: #C00000;
+        }
+        .high{
+            background-color: #FF0000;
+        }
+        .moderate{
+            background-color: #FF9900;
+        }
+        .low{
+            background-color: #92D050;
+        }
+        .verylow{
+            background-color: #00B050;
+        }
+        .centerColumn {
+            text-align: center;
+            vertical-align: middle; 
+        }
+        
     
 </style>
 
