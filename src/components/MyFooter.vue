@@ -20,7 +20,7 @@ export default defineComponent({
   name: 'AppFooter',  // multi-word component name
   data() {
     return {
-      year: '2025'
+      year: '2025',
     };
   },
 });
